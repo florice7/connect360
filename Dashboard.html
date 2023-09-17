@@ -1,0 +1,175 @@
+<html>
+  <head>
+    <title>Register2C360</title>
+    <link rel="stylesheet" href="styles.css" />
+ 
+<style>
+/* Reset some default styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Background color for the entire page */
+    color: #fff; /* Default text color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #444; /* Header background color */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Style header navigation links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Text color for navigation links */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Text color on hover */
+}
+
+/* Style the dashboard section */
+.dashboard {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Style the sidebar */
+/* Updated CSS for the sidebar */
+.sidebar {
+    flex: 0 0 20%; /* Set the width to 50% and disable flex growth and shrinking */
+    background-color: #222; /* Sidebar background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated CSS for the main content */
+.content {
+    flex: 1; /* Let the main content occupy the remaining width */
+    padding: 1rem;
+    background-color: #fff; /* Main content background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style sidebar navigation links */
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff; /* Text color for sidebar headings */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff; /* Text color for sidebar links */
+    background-color: #444; /* Background color for sidebar links */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.sidebar ul li a:hover {
+    background-color: #007bff; /* Background color on hover */
+}
+
+/* Style the main content */
+/* .content {
+    flex: 3;
+    padding: 1rem;
+    background-color: #fff; /* Main content background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+/* Style headings and text within the content area */
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333; /* Text color within the content area */
+}
+
+.content p {
+    color: #666; /* Text color for paragraphs within the content area */
+}
+
+</style>
+
+</head>
+  <body>
+    <img id="logo" src="Connect361.png" alt="Connect360" />
+    <div class="head"><h2>Welcome to Connect360</h2></div>
+    <div class="lks">
+      <a class="lks2" href="Flo.html">HOME</a>
+      <a class="lks2" href="Discover.html">DISCOVER</a>
+      <a class="lks2" href="AboutUs.html">ABOUT US</a>
+      <a class="lks2" href="Signup.html">REGISTER</a>
+    </div>
+    <div class="search">
+      <input class="inpu" type="search" name="" placeholder="Type to search" />
+      <a href="#"> <button class="btn">Search</button></a>
+    </div>
+   
+    <header>
+        <h1>Welcome, [Username]!</h1>
+        <nav>
+            <!-- Dashboard navigation links -->
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <aside class="sidebar">
+            <!-- Sidebar content -->
+            <h2>Navigation</h2>
+            <ul>
+                <li><a id="side" href="#">Dashboard</a></li>
+                <li><a href="#">My Posts</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <!-- Main content -->
+            <h2>Dashboard Overview</h2>
+            <p>Welcome to your user dashboard. Here, you can manage your profile, view your posts, and stay updated on messages and notifications.</p>
+        </main>
+    </section>
+
+
+</body>
+
+</html>

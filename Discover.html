@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BLOGS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img id="logo" src="Connect361.png" alt="Connect360">
+    <div class="head"><h2>Welcome to Connect360</h2></div>
+    <div class="lks">
+    <a class="lks2" href="Flo.html">HOME</a>
+    <a class="lks2"  href="Discover.html">DISCOVER</a>
+    <a class="lks2"  href="AboutUs.html">ABOUT US</a>
+    <a class="lks2"  href="Signup.html">REGISTER</a>
+    </div>  
+    <div class="search">
+        <input class="inpu" type="search" name="" placeholder="Type to search">
+        <a href="#"> <button class="btn">Search</button></a>
+    </div>
+
+    <section class="blog">
+        <article class="blog-post">
+            <h2>Exploring the Melodies of Nature</h2>
+            <p class="post-meta">By Diinya | August 24, 2023</p>
+            <img src="emi.jfif" alt="emi">
+            <p>Eminem comes back to hunt...</p>
+            <a href="#" class="read-more">Read more</a>
+        </article>
+        <article class="blog-post">
+            <h2>The best painting I did</h2>
+            <p class="post-meta">By Musafiri Florice | August 25, 2023</p>
+            <img src="emi.jfif" alt="emi">
+            <p>The epic of visual arts...</p>
+            <a href="#" class="read-more">Read more</a>
+        <!-- Like buttons -->
+        <div class="like-buttons">
+            <button id="thumbs-up">👍 Like</button>
+            <button id="thumbs-down">👎 Dislike</button>
+            <span id="like-count">0</span> Likes
+        </div>
+        
+            <!-- Comment section -->
+            <h3>Comments</h3>
+            <div id="comments">
+                <!-- Comments will be displayed here -->
+            </div>
+        
+            <!-- Comment form -->
+            <form id="comment-form">
+                <label for="comment">Leave a comment:</label>
+                <textarea id="comment" rows="4" cols="50"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+        <article class="blog-post">
+            <h2>Here is how I  compose my pieces</h2>
+            <p class="post-meta">By Cory Henry | August 24, 2023</p>
+            <img src="emi.jfif" alt="emi">
+            <p>Cory is still here...</p>
+            <a href="#" class="read-more">Read more</a>
+        </article>
+        <!-- Add more articles here -->
+    </section>
+    <script>
+          // Function to update and display the like count
+function updateLikeCount() {
+    const likeCountElement = document.getElementById("like-count");
+    likeCountElement.textContent = likeCount;
+}
+  
+let likeCount = 0; // Initialize the like count
+// Event listener for the like button
+document.getElementById("thumbs-up").addEventListener("click", () => {
+    // Increment the like count
+    likeCount++;
+
+    // Update and display the like count
+    updateLikeCount();
+});
+
+// Initial display of the like count
+updateLikeCount();
+
+
+const commentsData = [
+    { author: "User1", text: "Great post!" },
+    { author: "User2", text: "I enjoyed reading this." },
+    // Add more comments as needed
+];
+
+// Function to display comments
+function displayComments() {
+    const commentsContainer = document.getElementById("comments");
+    commentsContainer.innerHTML = ""; // Clear existing comments
+
+    commentsData.forEach((comment) => {
+        const commentDiv = document.createElement("div");
+        commentDiv.classList.add("comment");
+        commentDiv.innerHTML = `<strong>${comment.author}:</strong> ${comment.text}`;
+        commentsContainer.appendChild(commentDiv);
+    });
+}
+
+document.getElementById("comment-form").addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    const commentText = document.getElementById("comment").value;
+    if (commentText.trim() !== "") {
+        // Add the new comment to the data
+        commentsData.push({ author: "You", text: commentText });
+
+        // Clear the comment input
+        document.getElementById("comment").value = "";
+
+        // Display updated comments
+        displayComments();
+    }
+});
+
+// Initial display of comments
+displayComments();
+    </script>
+</body>
+</html>
+
